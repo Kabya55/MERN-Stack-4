@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form style="display: flex;">
+     <div style=" padding-left: 150px; padding-right: 200px;">
+        <h2>Please enter relevant information</h2>
+        
+        <label>District (Institute District: Where you want to do your course)*</label><br>
+        <select>
+            <option>--Select One--</option>
+            <option>Dhaka</option>
+            <option>Barishal</option>
+            <option>Chattogram</option>
+            <option>Khulna</option>
+            <option>Mymensingh</option>
+            <option>Rajshahi</option>
+            <option>Rangpur</option>
+            <option>Sylhet</option>
+            <option>Gazipur</option>
+        </select><br><br>
+        
+        <label>Course*</label><br>
+        <select>
+            <option>--Select One--</option>
+            <option>MERN Stack</option>
+            <option>WEB DESIGN</option>
+            <option>GRAPHICS DESIGN</option>
+            <option>DATA ENTRY</option>
+            <option>OFFICE APPLICATION</option>
+            <option>VIDEO EDITING</option>
+            <option>ANDROID APP DEVELOPMENT</option>
+            <option>IOS APP DEVELOPMENT</option>
+            <option>GAME DEVELOPMENT</option>
+            <option>NETWORKING</option>
+            <option>CCNA</option>
+            <option>CCNP</option>
+        </select><br><br>
+        
+        <label>Student Name*</label><br>
+        <input type="text" required placeholder="Input your Name"><br><br>
+        
+        <label>Father Name*</label><br>
+        <input type="text" required placeholder="Input your Father Name"><br><br>
+        
+        <label>Mother Name*</label><br>
+        <input type="text" required placeholder="Input your Mother Name"><br><br>
+        
+        <label for="birthday">Date of Birth*</label><br>
+        <div>
+            <label style="padding: 0px 37px 0px 0px;">Day</label>
+            <label style="padding: 0px 45px 0px 0px;">Month</label>
+            <label>Year</label>
+        </div>
+        <select name="Date" id="">
+            <option>Select</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+        <select name="Month" id="">
+            <option>Select</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <select name="Year" id="">
+            <option>Select</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>  
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+        </select><br><br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        
+        <label>Gender*</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other<br><br>
+        
+        <label>Physically Handicapped*</label><br>
+        <input type="radio" name="handicap"> Yes
+        <input type="radio" name="handicap"> No<br><br>
+        
+        <label for="email">Email*</label><br>
+        <input type="email" id="email" name="email" required placeholder="e.g: kabyakishor017@gmail.com"><br><br>
+        
+        <label for="phone">Phone (Must be 11 Digits)*</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder="e.g: 01750084574"><br><br>
+     </div>
+     <div style="padding-top: 70px;">
+        <label>Identification Type*</label><br>
+        <select>
+            <option>Select One</option>
+        </select><br><br>
+        
+        <label>Identification No.*</label><br>
+        <input type="text"><br><br>
+        
+        <label>Home District*</label><br>
+        <select for="district">
+            <option>--Select One--</option>
+            <option>Dhaka</option>
+            <option>Barishal</option>
+            <option>Chattogram</option>
+            <option>Khulna</option>
+            <option>Mymensingh</option>
+            <option>Rajshahi</option>
+            <option>Rangpur</option>
+            <option>Sylhet</option>
+            <option>Gazipur</option>
+
+        </select><br><br>
+        
+        <label for="Upazila">Upazila*</label><br>
+        <select>
+            <option>Select One</option>
+            <option>Swrupkhati</option>
+            <option>Shibpur</option>
+            <option>Shibchar</option>
+            <option>Nazirpur</option>
+            <option>Barisal Sadar</option>
+            <option>Bakerganj</option>
+            <option>Banaripara</option>
+            <option>Agailjhara</option>
+            <option>Babuganj</option>
+            <option>Wazirpur</option>
+            <option>Uzirpur</option>
+            <option>Muladi</option>
+            <option>Hizla</option>
+            <option>Mehendiganj</option>
+            <option>Aurangajeb</option>
+            <option>Bhola Sadar</option>
+            <option>Charfashion</option>
+            <option>Daulatkhan</option>
+            <option>Lalmohan</option>
+            <option>Manpura</option>
+            <option>Tazumuddin</option>
+            <option>Barguna Sadar</option>
+            <option>Amtali</option>
+            <option>Bamna</option>
+            <option>Betagi</option>
+            <option>Patharghata</option>
+            <option>Agailjhara</option>
+            <option>Babuganj</option>
+            <option>Wazirpur</option>
+            <option>Uzirpur</option>
+            <option>Muladi</option>
+            <option>Hizla</option>
+            <option>Mehendiganj</option>
+        </select><br><br>
+        
+        <label>Village/House No./Road No./Other Alternative*</label><br>
+        <input type="text"><br><br>
+        
+        <label>Post Office*</label><br>
+        <input type="text"><br><br>
+        
+        <label>Educational Qualification* (Higher Level)</label><br>
+        <select>
+            <option>--Select One--</option>
+            <option>SSC</option>
+            <option>HSC</option>
+            <option>Graduation</option>
+            <option>Post Graduation</option>
+            <option>Others</option>
+        </select><br><br>
+        
+        <label>Have any computer?*</label><br>
+        <input type="radio" name="computer"> Yes
+        <input type="radio" name="computer"> No<br><br>
+        
+        <label>Photograph*</label><br>
+        <input type="file" accept=".jpg, .jpeg, .png"><br><br>
+        
+        <label>Signature*</label><br>
+        <input type="file" accept=".jpg, .jpeg, .png"><br><br>
+        
+        <button type="submit">Submit Data</button>
+     </div>
+    </form>
+</body>
+</html>
