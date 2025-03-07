@@ -1,0 +1,177 @@
+/* General Styles */
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@font-face {
+  font-family: Shohid;
+  src: url(../font/ShohidTahmidTamin/Li\ Shohid\ Tahmid\ Tamin\ Unicode.ttf);
+}
+@font-face {
+  font-family: Galada;
+  src: url(../font/Galada/Galada-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Shohid;
+}
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 100%;
+  height: 50px;
+  margin-right: 10px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-btn {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 20px;
+  font-family: Shohid;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  padding: 50px 20px;
+  background-color: #e3f2fd;
+}
+.hero img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+.hero h1 {
+  color: #333;
+  font-family: Shohid;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  color: #555;
+  font-family: Galada;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.last {
+  margin-bottom: 50px;
+}
+
+.hero ul {
+  padding: 0;
+}
+
+.hero li {
+  font-size: 18px;
+  font-family: Galada;
+  margin: 15px 30px;
+  text-align: left;
+
+}
+
+.hero button {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-family: Shohid;
+  border: none;
+  /*cursor: pointer;*/
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.hero button:hover {
+  background-color: #0056b3;
+}
+
+/* Extra Section (About Us) */
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.extra-section {
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.extra-section h2 {
+  font-size: 35px;
+  color: #333;
+}
+
+.extra-section p {
+  font-size: 18px;
+  font-family: Galada;
+  color: #555;
+  margin: 20px 0;
+}
+
+.team-box{
+  padding-top: 30px;
+  text-align: center;
+}
+.team-img{
+  margin: 0px 10px 20px;
+  position: relative;
+}
+.team-text h4{
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Big Shoulders Inline", sans-serif;
+  color: #1a1919;
+}
+.team-text p{
+  font-size: 18px;
+  color: #555;
+  font-family: Galada;
+  /*font-family: AlinurNobin;*/
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 18px;
+  position: relative;
+  bottom: 0;
+  align-items: center;
+  padding: 20px;
+  font-family: Galada;
+  font-weight: 600;
+}
