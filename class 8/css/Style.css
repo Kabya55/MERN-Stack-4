@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*nav bar start*/
+.nav-bar{
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+/* I hide the checkbox because I only need the label */
+#check{
+    display: none;
+}
+.button{
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    padding: 12px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    padding-top: 8px;
+    line-height: 8px;
+    text-align: left;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    z-index: 201;
+}
+.button:hover{
+    background: #ffffff;
+}
+.button span{
+    height: 3px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    display: inline-block;
+    transition: all 0.5s cubic-bezier(.62,.43,.35,1.47);
+}
+/* toggle icon animation */
+#check:checked ~ .button span:nth-child(1){
+    width: 100%;
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+#check:checked ~ .button span:nth-child(2){
+    width: 0;
+}
+
+#check:checked ~ .button span:nth-child(3){
+    width: 100%;
+    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+}
+/* the nav height is set to 0 when the navbar is closed */
+nav{
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    width: 80%;
+    border-radius: 10px;
+    background: #ffffff;
+    height: 0;
+}
+nav a{
+    text-decoration: none;
+    color: #0c1019;
+    display: block;
+    font-size: 18px;
+    transition: all 0.4s cubic-bezier(.22,.43,.35,1.5);
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    text-align: center;
+    /*border-bottom: 1px solid #b4ac97;*/
+}
+nav a:hover{
+    background: #ffdd7f;
+}
+/* the nav height will be set to the height in pixels that would have for default, using height:auto won't work but you can put that value in pixels creating the slide*/
+#check:checked ~ nav{
+    height: auto;
+}
+#check:checked ~ nav a{
+    padding: 8px;
+    opacity: 1;
+    transform: scale(1);
+}
+/*nav bar end*/
+/*hero section start*/
+.hero-img-container {
+    background-image: url(../img/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .hero-img {
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    top: -90px;
+  }
+  .hero-desc {
+   margin-top: -5rem;
+    text-align: center;
+  }
+  .hero-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: hsl(231, 19%, 14%);
+    margin: 0 auto;
+  }
+  .hero-p {
+    text-align: center;
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    color: hsl(233, 8%, 62%);
+  }
+  .hero-btn {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(45deg, #06fb70, #0b89c8);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    display: block;
+    margin: 3rem auto;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .hero-btn:hover {
+    background: linear-gradient(45deg, #0b89c8, #06fb70);
+  }
+  /*hero section end*/
+  /*Why choose section start*/
+  .why-choose-area{
+    text-align: center;
+    margin: 0 auto;
+
+  }
+  .why-choose-area h2{
+    text-align: center;
+    max-width: 600px;
+    font-size: 1.8rem;
+    margin: 2rem auto;
+    color: hsl(231, 19%, 14%);
+  }
+  .why-choose-area p{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    color: hsl(233, 8%, 62%);
+  }
+  .ficon{
+    text-align: center;
+  }
+  .option-text{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .option-text h2{
+    max-width: 600px;
+    font-size: 1.8rem;
+    margin: 2rem auto;
+    color: hsl(231, 19%, 14%);
+  }
+  .option-text p{
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    color: hsl(233, 8%, 62%);
+  }
+/*Why choose section end*/
+/*Latest article section start*/
+.latest-article{
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.article-area h2{
+  text-align: center;
+  max-width: 600px;
+  font-size: 1.8rem;
+  margin: 2rem auto 0 auto;
+  color: hsl(231, 19%, 14%);
+}
+.article-img img{
+  margin: 2.5rem auto 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+.article-text h4{
+  text-align: start;
+  max-width: 600px;
+  font-size: 1rem;
+  margin: 1rem auto;
+  color: hsl(231, 19%, 14%);
+}
+.article-text h3{
+  text-align: start;
+  max-width: 600px;
+  font-size: 1.5rem;
+  margin: 0.5rem auto;
+  color: hsl(231, 19%, 14%);
+}
+.article-text p{
+  text-align: start;
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin: 0.5rem auto;
+  color: hsl(233, 8%, 62%);
+}
+/*Latest article section end*/
+/*footer section start*/
