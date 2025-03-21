@@ -1,0 +1,31 @@
+@media (min-width: 1024px) {
+    @media only screen and (min-width: 993px) {
+        .hero {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-img-container {
+            background-image: url(../img/bg-intro-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            right: -450px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-desc {
+            text-align: left;
+            margin-left: 200px;
+        }
+    }
+}
