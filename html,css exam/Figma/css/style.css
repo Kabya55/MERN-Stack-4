@@ -190,6 +190,7 @@ body{
 /*Product part start*/
 .product-part{
     margin-top: 4rem;
+    margin-bottom: 4rem;
     flex-direction: column;
 }
 .product{

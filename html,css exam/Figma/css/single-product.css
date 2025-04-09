@@ -342,6 +342,7 @@ body{
 }
 .product-part{
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 .product{
     justify-content: center;
