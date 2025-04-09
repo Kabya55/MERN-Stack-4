@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/title Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/single-product.css">
+</head>
+<body>
+    <!--Header part start-->
+    <nav class="wrapper-full header-part">
+        <div class="wrapper d-flex navicon">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Logo.png" alt="logo"></a>
+            </div>
+            <div class="manu">
+                <ul class="d-flex">
+                    <li><a href="./index.html">Home</a></li> 
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li class="active"><a href="./single-product.html">Single Product</a></li>
+                    <li><a href="./Cart.html">Cart</a></li>
+                    <li><a href="./Checkout.html">Checkout</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./Blog.html">Blog </a></li>
+                </ul>
+            </div>
+            <div class="social-icon">
+                <ul class="d-flex">
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Header Section end -->
+
+    <!--Toolbar section start-->
+    <section class="wrapper-full toolbar-part">
+        <div class="wrapper">
+            <div class="toolbar d-flex">
+                <div class="left-section1">
+                    <div class="filter-icons">
+                        <span>
+                            Home
+                        </span>
+                        <div>
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12L5 7L0 2L1 0L8 7L1 14L0 12Z" fill="black"/>
+                            </svg>                                
+                        </div>
+                        <span>
+                            shop
+                        </span>
+                        <div>
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12L5 7L0 2L1 0L8 7L1 14L0 12Z" fill="black"/>
+                            </svg>                                
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <span class="asgaard-sofa">Asgaard sofa</span>
+                </div>
+                
+                <!-- <div class="right-section">
+                    <span>Show</span>
+                    <input type="number" value="16" min="1">
+                    <span>Short by</span>
+                    <select>
+                        <option>Default</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!--Toolbar section end-->
+
+    <!--Add To Cart Section start-->
+    <section class="wrapper-full cart-part">
+        <div class="wrapper d-flex">
+            <div class="left-section d-flex">
+                <div class="sofa-group">
+                    <img src="./img/Asgaard sofa Group.png" alt="sofa Group">
+                </div>
+                <div class="sofa-img">
+                    <div></div>
+                    <!-- <img src="./img/Asgaard sofa.png" alt="sofa"> -->
+                </div>
+            </div>
+            <div class="right-section">
+                <h1>Asgaard sofa</h1>
+                <p class="price">Rs. 250,000.00</p>
+                <div class="rating">
+                    <span>
+                        <svg width="124" height="20" viewBox="0 0 124 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1L13 7L19 7.75L14.88 12.37L16 19L10 16L4 19L5.13 12.37L1 7.75L7 7L10 1Z" fill="#FFC700"/>
+                            <path d="M36 1L39 7L45 7.75L40.88 12.37L42 19L36 16L30 19L31.13 12.37L27 7.75L33 7L36 1Z" fill="#FFC700"/>
+                            <path d="M62 1L65 7L71 7.75L66.88 12.37L68 19L62 16L56 19L57.13 12.37L53 7.75L59 7L62 1Z" fill="#FFC700"/>
+                            <path d="M88 1L91 7L97 7.75L92.88 12.37L94 19L88 16L82 19L83.13 12.37L79 7.75L85 7L88 1Z" fill="#FFC700"/>
+                            <path d="M111.156 7.0125L104.8 7.9375L109.4 12.4188L108.313 18.75L114 15.7625V1.25L111.156 7.0125Z" fill="#FFC700"/>
+                            </svg>
+                            
+                    </span>
+                    <span>
+                            <svg width="1" height="30" viewBox="0 0 1 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.5" x2="0.5" y2="30" stroke="#9F9F9F"/>
+                            </svg>
+                            
+                    </span>
+                    <p>5 Customer Review</p>
+                </div>
+                <p class="des">Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
+                
+                <div class="size-section">
+                    <p>Size</p>
+                    <button class="size">L</button>
+                    <button class="size">XL</button>
+                    <button class="size">XS</button>
+                </div>
+
+                <div class="color-section">
+                    <p>Color</p>
+                    <div class="color blue"></div>
+                    <span class="color black"></span>
+                    <span class="color gold"></span>
+                </div>
+
+                <div class="cart-section">
+                    <button class="quantity-btn">-</button>
+                    <span>1</span>
+                    <button class="quantity-btn">+</button>
+                    <button class="cart-btn">Add To Cart</button>
+                    <button class="compare-btn">+ Compare</button>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                    <p><strong>SKU:</strong> SS001</p>
+                    <p><strong>Category:</strong> Sofas</p>
+                    <p><strong>Tags:</strong> Sofa, Chair, Home, Shop</p>
+                    <p><strong>Share:</strong> 
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Add To Cart Section end-->
+
+
+    <!--Description section start-->
+    <section class="wrapper-full description-part">
+        <div class="wrapper d-flex">
+            <div class="description d-flex">
+                <div class="description-heading d-flex">
+                    <div class="text">Description</div>
+                    <div class="text1">Additional Information</div>
+                    <div class="text1">Reviews [5]</div>
+                </div>
+                <div class="description-p">
+                    <div class="description-p1">Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</div>
+                    <div class="description-p2">Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</div>
+                </div>
+            </div>
+            <div class="description-img d-flex">
+                <img class="description-img1" src="./img/sofa1.jpg" alt="Description">
+                <img class="description-img2" src="./img/sofa2.jpg" alt="Description">
+            </div>
+        </div>
+    </section>
+
+    <!--product section start-->
+    <section class="wrapper-full d-flex product-part">
+        <div class="wrapper">
+            <div class="common-heading">
+                <h3>Related Products</h3>
+            </div>
+        </div>
+        <div class="wrapper d-flex">
+            <!--product picture 1-->
+            <div class="product d-flex">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./img/Syltherine.jpg" alt="Syltherine">
+                    </div>
+                    <h3>Syltherine</h3>
+                    <p>Stylish cafe chair</p>
+                    <h3>Rp 2.500.000 <del>Rp 3.500.000</del></h3>
+                    <div class="discound"><p>-30%</p></div>
+                    <div class="product-overlay">
+                        <div class="overlay-btn">
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-share-nodes"> Share</i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"> Compare</i>
+                            <i class="fa-regular fa-heart"> Like</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product picture 2-->
+            <div class="product d-flex">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./img/Leviosa.jpg" alt="Leviosa">
+                    </div>
+                    <h3>Leviosa</h3>
+                    <p>Stylish cafe chair</p>
+                    <h3>Rp 2.500.000</h3>
+                    <div class="product-overlay">
+                        <div class="overlay-btn">
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-share-nodes"> Share</i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"> Compare</i>
+                            <i class="fa-regular fa-heart"> Like</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product picture 3-->
+            <div class="product d-flex">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./img/Lolito.jpg" alt="Lolito">
+                    </div>
+                    <h3>Lolito</h3>
+                    <p>Luxury big sofa</p>
+                    <h3>Rp 7.000.000 <del>Rp 14.000.000</del></h3>
+                    <div class="discound"><p>-50%</p></div>
+                    <div class="product-overlay">
+                        <div class="overlay-btn">
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-share-nodes"> Share</i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"> Compare</i>
+                            <i class="fa-regular fa-heart"> Like</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product picture 4-->
+            <div class="product d-flex">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./img/Respira.jpg" alt="Respira">
+                    </div>
+                    <h3>Respira</h3>
+                    <p>Outdoor bar table and stool</p>
+                    <h3>Rp 500.000</h3>
+                    <div class="discound1"><p>New</p></div>
+                    <div class="product-overlay">
+                        <div class="overlay-btn">
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="overlay-icon">
+                            <i class="fa-solid fa-share-nodes"> Share</i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"> Compare</i>
+                            <i class="fa-regular fa-heart"> Like</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--product picture END-->
+        <div class="product-btn wrapper">
+            <a href="#">Show More</a>
+        </div>
+    </section>
+    <!--product section end-->
+
+    <!--footer section start-->
+    <footer class="wrapper-full">
+        <div class="wrapper">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h2 class="logo">Funiro.</h2>
+                    <p>400 University Drive Suite 200 Coral Gables,<br> FL 33134 USA</p>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./single-product.html">Single Product</a></li>
+                        <li><a href="./Contact.html">Contact</a></li>
+                        <li><a href="./Blog.html">Blog </a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policies</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter-box">
+                        <input type="email" placeholder="Enter Your Email Address">
+                        <div class="bt">SUBSCRIBE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer section end-->
+
+    <!--copyright section start-->
+    <div class="wrapper-full"> 
+        <div class="wrapper">
+            <div class="copyright">
+                <p>©2025 Kabya. All rights reverved.</p>
+            </div>
+        </div>
+    </div>
+    <!--copyright section end-->
+
+</body>
+</html>

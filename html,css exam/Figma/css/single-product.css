@@ -1,0 +1,583 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+ol,ul{
+    list-style-type: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    
+}
+.wrapper-full{
+   width: 100%;
+   
+}
+.wrapper {
+    width: 1200px;
+    margin: 0px auto;
+    
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.clr{
+    clear: both;
+}
+/*Header part start*/
+.header-part{
+    background-color: #ffffff;
+    padding: 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+}
+.navicon{
+    justify-content: space-between;
+}
+.manu ul li a{
+    color: #000000;
+    display: block;
+    padding: 10px;
+    /* margin: 0px 10px; */
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+.manu ul li.active a,
+.manu ul li a:hover{
+    color: #4488c3;
+}
+.social-icon ul li a{
+    color: #000000;
+    display: block;
+    padding: 10px;
+    align-items: end;
+    /* margin: 0px 10px; */
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+.social-icon ul li a:hover{
+    color: #4488c3;
+}
+/*Header part End*/
+
+/*Toolbar section start*/
+.toolbar {
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f3eb;
+    margin: 1rem auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.left-section1{
+    display: flex;
+    align-items: center;
+}
+.left-section1 span{
+    margin-right: 15px;
+    font-size: 14px;
+    color: #333;
+}
+.filter-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.filter-icons span {
+    font-size: 1rem;
+    color: #9F9F9F;
+}
+.filter-icons div {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.divider {
+    height: 2rem;
+    width: 2px;
+    background: #ada4a4;
+    margin: 0 10px;
+}
+.asgaard-sofa{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+/*Toolbar section end*/
+
+/*Add To Cart Section start*/
+.cart-part{
+    margin: 3rem auto;
+}
+.left-section{
+    width: 530px;
+    justify-content: space-between;
+}
+.sofa-group{
+    width: 75px;
+    height: 416px;
+}
+.sofa-group img{
+    position: absolute;
+    top: 204px;
+}
+.sofa-img{
+    width: 400px;
+    height: 500px;
+    background-color: #F9F1E7;
+    border-radius: 10px;
+}
+.sofa-img div{
+    position: absolute;
+    overflow: hidden;
+    width: 453px;
+    height: 391px;
+    left: 171px;
+    top: 324px;
+    background-image: url('../img/Asgaard\ sofa.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.right-section{
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    display: block;
+}
+
+.right-section h1 {
+    font-size: 3rem;
+    color: #000000;
+    font-weight: 600;
+}
+.price {
+    font-size: 24px;
+    color: #9F9F9F;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.des{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.size-section, .color-section {
+    margin-top: 10px;
+}
+.rating p, .size-section p, .color-section p {
+    font-size: 1.2rem;
+    color: #9F9F9F;
+    font-weight: 700;
+}
+.size, .quantity-btn, .cart-btn, .compare-btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.size {
+    font-size: 1rem;
+    color: #000000;
+    background-color: #F9F1E7;
+    transition: all 0.4s ease;
+}
+.size:hover {
+    background-color: #B88E2F;
+    color: #ffffff;
+}
+.color {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.blue { 
+    background: #816DFA; 
+}
+.black { 
+    background: #000000; 
+}
+.gold { 
+    background: #B88E2F; 
+}
+.cart-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.quantity-btn {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.quantity-btn:hover {
+   border: 1px solid #9F9F9F;
+}
+.cart-btn {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.cart-btn:hover {
+    border: 1px solid #9F9F9F;
+}
+.compare-btn {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.compare-btn:hover {
+    border: 1px solid #9F9F9F;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #9F9F9F;
+    margin: 25px 0;
+}
+.details {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+}
+.details p i {
+    margin-right: 5px;
+    font-family: 1.5rem;
+}
+
+
+/*Description section start*/
+.description-part{
+    margin: 5rem auto;
+}
+.description{
+    margin: 1rem auto;
+    width: 80%;
+}
+.description-heading {
+    justify-content: center;
+    align-items: center;
+    /* right: 20%; */
+    margin: 0 auto;
+
+}
+.description-heading div{
+    margin: 0 1.5rem;
+}
+
+
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+.text1{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #9F9F9F;
+}
+.description-p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9F9F9F;
+    margin: 1.5rem 0;
+}
+.description-p1{
+    padding: 20px 0;
+}
+.description-img{
+    width: 100%;
+    gap: 2%;
+}
+.description-img1{
+    width: 49%;
+    
+}
+.description-img2{
+    width: 49%;
+}
+
+/*Product part start*/
+.common-heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+.product-part{
+    margin-top: 4rem;
+}
+.product{
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.product-item{
+    text-align: left;
+    /* padding: 20px; */
+    width: 280px;
+    height: 445px;
+    margin: 0 10px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+.product-img{
+    width: 250px;
+    height: 300px;
+}
+.product-item h3{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin: .5rem 0;
+    color: #333333;
+}
+.product-item p{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: #666666;
+}
+.product-item h3 del{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    margin: .54rem;
+    color: #666666;
+}
+.discound{
+    position: absolute;
+    background-color: #E97171;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    top: 14%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+.discound p{
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.discound1{
+    position: absolute;
+    background-color: #2EC1AC;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    top: 14%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+.discound1 p{
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.product-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0; 
+}
+.product-item:hover .product-overlay{
+    opacity: 1;
+}
+.overlay-btn a{
+    background-color: #ffffff;
+    color: #B88E2F;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.overlay-btn a:hover{
+    background-color: #B88E2F;
+    color: #ffffff;
+}
+.overlay-icon{
+    position: absolute;
+    text-align: center;
+     top: 55%;
+    left: 5%;
+    /*transform: translate(-50%, -50%); */
+}
+.overlay-icon i{
+    color: #ffffff;
+    font-size: .8rem;
+    padding: 10px;
+}
+.overlay-icon i:hover{
+    color: #B88E2F;
+}
+.product-btn{
+    text-align: center;
+    margin: 1rem auto;
+}
+.product-btn a{
+    /* background-color: #B88E2F; */
+    color: #B88E2F;
+    padding: 10px 50px;
+    border: 1px solid #B88E2F;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+.product-btn a:hover{
+    background-color: #B88E2F;
+    color: #ffffff;
+}
+/*Product part end*/
+
+/*footer part start*/
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff3e388;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #000;
+}
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1.2rem;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid #000; */
+    padding-bottom: 5px;
+}
+
+.newsletter-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+}
+
+.bt {
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding: 5px auto;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.bt:hover {
+    padding: 5px 10px;
+}
+
+/*footer part end*/
+
+/*copyright part start*/
+.copyright{
+    text-align: left;
+    margin-top: 2rem;
+}
+.copyright p{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    margin-bottom: 1rem;
+}
+/*copyright part end*/

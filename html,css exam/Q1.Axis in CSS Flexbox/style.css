@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Main axis is horizontal */
+    justify-content: center; /* Align items along the main axis */
+    align-items: center; /* Align items along the cross axis */
+    height: 100px;
+    border: 2px solid black;
+  }
+  
+.item {
+  margin: 10px;
+  padding: 25px;
+  text-align: center;
+  background-color: rgb(7, 184, 243);
+}
+  

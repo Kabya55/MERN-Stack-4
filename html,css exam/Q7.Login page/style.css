@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: url('./img/bg1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin: 10px 0;
+    
+}
+.user-icon {
+    position: absolute;
+    left: 28px;
+    top: 26%;
+    transform: translateY(-7%);
+}
+.lock-icon{
+    position: absolute;
+    left: 28px;
+    top: 42%;
+    transform: translateY(-7%);
+}
+.input-box input {
+    width: 100%;
+    padding: 10px 30px;
+    margin-top: 7px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.322);
+}
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+
+}
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.322);
+    font-weight: bold;
+    cursor: pointer;
+}
+p {
+    margin: 15px 0;
+    color: goldenrod;
+}
+.social-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.facebook, .google {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.facebook {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.322)
+}
+.google {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.322)
+}
