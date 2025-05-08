@@ -670,6 +670,14 @@ anonymous(10, 20);
 
 console.log("------------------");
 
+// Arrow function
+// function er modha jodi arrow function use kora hoy tahole take arrow function bole
+
+let arrowFunction = (num1, num2) => num1 + num2;
+console.log(arrowFunction(10, 20)); // 30
+
+console.log("------------------");
+
 // fanction return
 
 function adder(num1, num2) {
@@ -787,3 +795,813 @@ console.log("Stike Rate: " + stike); // 166.66666666666666
 console.log("Stike Rate: " + stike.toFixed(2)); // 166.67
 
 console.log("------------------");
+
+// Objects retirel
+// Objects are used to store data values in key-value pairs.
+// Objects are mutable data structure, ja ekadhik value store korte pare
+// Object are vitor ja function thakay take method bole
+
+let person = {
+  name: "Kabya",
+  age: 20,
+  city: "Dhaka",
+  getFullName: function () {
+    console.log("Kabya Kishor Halder");
+  },
+};
+console.log(person); // { name: 'Kabya', age: 20, city: 'Dhaka' }
+console.log(person.name); // Kabya
+console.log(person["name"]); // Kabya
+person.getFullName();
+person["getFullName"](); // Kabya Kishor Halder
+
+console.log("------------------");
+
+// Jodi amra kono key-value add korta chai ta ja vaba korbo
+person.height = 5.9; // person.height = 5.9;
+person.hobby = ["progriming", "reading", "writing"]; // person.hobby = ['programming', 'reading', 'writing'];
+console.log(person); // { name: 'Kabya', age: 20, city: 'Dhaka', height: 5.9, hobby: [ 'programming', 'reading', 'writing' ] }
+
+console.log("------------------");
+
+// Amra jodi kono key-value delete korta chai ta ja vaba korbo
+delete person.height; // delete person.height;
+console.log(person); // { name: 'Kabya', age: 20, city: 'Dhaka' }
+
+console.log("------------------");
+
+//object er modha amra ki vaba loop chalabo tar example
+// for in loop
+// Amra key dhaker somay (); ai ta babor korbo / value dhaker somay ([]) ai vaba babor korbo
+
+for (let key in person) {
+  console.log(key); // name, age, city, height, hobby
+  // console.log(person[key]);
+}
+
+console.log("------------------");
+
+for (let val in person) {
+  console.log(person[val]); // Kabya, 20, Dhaka, 5.9, [ 'programming', 'reading', 'writing'
+}
+
+console.log("------------------");
+
+// property && method ak sata ki vaba envoke kora hoy
+// property are modha jodi kono value thake tahole take property bole, jodi kono function thake tahole take method bole
+
+for (let el in person) {
+  if (typeof person[el] == "function") {
+    person[el]();
+  } else {
+    console.log(person[el]);
+  }
+}
+
+console.log("------------------");
+
+// calculate
+
+let calculate = {
+  plus(num1, num2) {
+    return num1 + num2;
+  },
+  minus(num1, num2) {
+    return num1 - num2;
+  },
+  multiply(num1, num2) {
+    return num1 * num2;
+  },
+  divide(num1, num2) {
+    return num1 / num2;
+  },
+};
+
+console.log(calculate.plus(10, 20)); // 30
+console.log(calculate.minus(20, 15)); // 5
+console.log(calculate.multiply(15, 2)); // 30
+console.log(calculate.divide(20, 5)); // 4
+
+console.log("------------------");
+
+//Dynimic calculation
+// are madhoma 2 are odhik sonka +,-,*,/ korta parbo
+
+function calculater5(...nums) {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result += nums[i];
+  }
+  return result;
+}
+console.log(calculater5(10, 20)); // 30
+console.log(calculater5(10, 20, 30)); // 60
+
+let nums = [10, 20, 30, 40, 50];
+console.log(calculater5(...nums)); // 150
+
+console.log("------------------");
+
+// spread operator
+// spread operator er madhoma amra akta array er value add korta pari
+
+let arr2 = [1, 2, 3, 4, 5];
+let arr3 = [6, 7, 8, 9, 10];
+let arr4 = [...arr2, ...arr3]; // [...arr, ...arr1] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(...arr); // 1 2 3 4 5
+console.log(...arr4); // 1 2 3 4 5 6 7 8 9 10
+
+console.log("------------------");
+
+// this keyword
+// this 2 jaygay use hoy
+// 1. function er modha this keyword envok hola Global object k refer kore, jodi function er modha this keyword use hoy tahole take Global object bole
+// 2. method/object er modha this keyword envok hola tar parent object k refer kore, jodi method er modha this keyword use hoy tahole take parent object bole
+
+// this keyword is used to refer to the current object in JavaScript. It is used to access the properties and methods of the current object.
+// this keyword is used in many different contexts, such as functions, methods, constructors, and event handlers.
+
+// function -> this keyword refer to the global object
+
+let person1 = {
+  name: "Kabya Kishor Halder",
+  age: 20,
+  city: "Pirojpur",
+  interest: ["Html", "Css", "JavaScript"],
+  kabita() {
+    console.log("Hello", this.name); // Hello Kabya Kishor Halder
+  },
+  nameInterest() {
+    this.interest.forEach(function (interest) {
+      // Anonymous function
+      console.log(this.name + " Loves " + interest);
+    }, this); // }, this/person1); dita hoba
+  },
+};
+person1.nameInterest(); // Hello Kabya Kishor Halder
+
+console.log("------------------");
+//Arrow function babor kora upor kaj ta ki vaba korta pari
+
+// Arrow function -> this keyword refer to the global object
+// Arrow function er modha this keyword use korle take global object k refer kore, jodi arrow function er modha this keyword use hoy tahole take global object bole
+
+let person2 = {
+  name: "Kabya Kishor Halder",
+  age: 20,
+  city: "Pirojpur",
+  interest: ["Html", "Css", "JavaScript"],
+  kabita() {
+    console.log("Hello", this.name); // Hello Kabya Kishor Halder
+  },
+  nameInterest() {
+    this.interest.forEach((interest) => {
+      // Arrow function
+      console.log(this.name + " Loves " + interest);
+    });
+  },
+};
+person1.nameInterest(); // Hello Kabya Kishor Halder
+
+console.log("------------------");
+
+// method/object -> this keyword refer to the parent object
+
+let person4 = {
+  name: "Kabya Kishor Halder",
+  age: 20,
+  city: "Pirojpur",
+  interest: ["Html", "Css", "JavaScript"],
+  kabita() {
+    console.log("Hello", this.name); // Hello Kabya Kishor Halder
+  },
+};
+person4.kabita(); // Hello Kabya Kishor Halder
+
+console.log("------------------");
+
+// Factory function
+// Factory function holo akta function ja object create kore, ja amra jodi ekta function er modha object create kori tahole take factory function bole
+
+function createPerson(name, age, interest) {
+  return {
+    name: name,
+    age: age,
+    interest: interest,
+    kabita: function () {
+      console.log("Hello"); // Hello Kabya Kishor Halder
+    },
+  };
+}
+
+let person5 = createPerson("Kabya", 28, ["Html", "Css", "JavaScript"]);
+let person6 = createPerson("Kishor", 25, ["Html", "Css", "JavaScript"]);
+console.log(person5);
+console.log(person6);
+
+console.log("------------------");
+// More then easy way
+
+function createPerson(name, age, interest) {
+  return {
+    name, //name: name, jodi same hoy tahole sudu name, liklai hobe
+    age,
+    interest,
+    kabita() {
+      // kabita: function () amra ai khana short kora sudu kabita() likhe pari
+      console.log("Hello");
+    },
+  };
+}
+
+let person7 = createPerson("Kabya", 28, ["Html", "Css", "JavaScript"]);
+let person8 = createPerson("Kishor", 25, ["Html", "Css", "JavaScript"]);
+console.log(person7);
+console.log(person8);
+
+console.log("------------------");
+
+// Constructor function
+// Constructor function holo akta function ja object create kore, ja amra jodi ekta function er modha object create kori tahole take constructor function bole
+// Ai khana amra PascalCase use korbo example -> FirstName
+
+function CreatePerson(name, age, interest) {
+  this.name = name;
+  this.age = age;
+  this.interest = interest;
+}
+let person9 = new CreatePerson("Kabya Kishor Halder", 28, [
+  "Html",
+  "Css",
+  "JavaScript",
+  "React",
+]); // new <- ak ta js keyword jar dara bujano hoy tumi ak ta object create korta chao
+console.log(person9); // { name: 'Kabya Kishor Halder', age: 28, interest: [ 'Html', 'Css', 'JavaScript', 'React' ] }
+
+console.log("------------------");
+// Constructor function a -> class ki vaba babor kora hoy
+// class er modha constructor function use kora hoy, jate amra class er modha object create korte pari
+
+class CreatePerson1 {
+  constructor(name, age, interest) {
+    // constructor ak ta inbuilt function
+    // constructor are vitora must be -> this keyword use kora hoy
+    this.name = name;
+    this.age = age;
+    this.interest = interest;
+  }
+  kabita() {
+    console.log("Hello", this.name); // Hello Kabya Kishor Halder
+  }
+}
+let person10 = new CreatePerson1("Kabya Kishor Halder", 28, [
+  "Html",
+  "Css",
+  "JavaScript",
+  "React",
+  "Node Js",
+]); // new <- ak ta js keyword jar dara bujano hoy tumi ak ta object create korta chao
+console.log(person10); // { name: 'Kabya Kishor Halder', age: 28, interest: [ 'Html', 'Css', 'JavaScript', 'React' ] }
+person10.kabita(); // Hello Kabya Kishor Halder
+console.log(person10.kabita()); // Hello Kabya Kishor Halder
+
+console.log("------------------");
+
+// Iffy -> Immediately Invoked Function Expression
+
+(function sayHello() {
+  console.log("Hello Kabya");
+})(); // Hello Kabya
+
+(sayHello2 = () => {
+  console.log("Hello Kabita");
+})();
+
+(() => {
+  console.log("Hello Khoken");
+})();
+
+((name) => {
+  console.log("Hello", name);
+})("Tandra");
+
+console.log("------------------");
+//Live Class 24: JavaScript Array Methods - Map, Filter, Sort, Every, Some, Reduce
+// Array Map
+// "Array map" (JavaScript-er .map() method) tokhon babohar kora hoy jokhon tumi ekta array-r prottekta element-er upor same dhoroner operation apply kore ekta notun array pete chao, original array ke na bodle.
+
+let number1 = [2, 3, 4, 5];
+let newArray1 = number1.map((element) => {
+  return element * 2;
+});
+console.log(newArray1); // [4, 6, 8, 10]
+
+//  Aro short vaba
+let newArray2 = number1.map((element) => element * 2);
+console.log(newArray2); // [4, 6, 8, 10]
+
+console.log("------------------");
+//problem solving
+
+const characters = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Get an array of all names
+let allNames = characters.map((el) => {
+  return el.name;
+});
+console.log(allNames); // ['Luke Skywalker', 'Darth Vader', 'Leia Organa', 'Anakin Skywalker']
+
+// Short way
+let allNames1 = characters.map((el) => el.name);
+console.log(allNames1);
+
+console.log("------------------");
+
+// Get an array of all heights
+let allHeights = characters.map((el) => el.height);
+console.log(allHeights); // ['172', '202', '150', '188']
+
+console.log("------------------");
+
+// Get an array of objects with just name and height properties
+
+let nameAndHeight = characters.map((el) => {
+  return {
+    name: el.name,
+    height: el.height,
+  };
+});
+console.log(nameAndHeight); // [ { name: '172', height: '172' }, { name: '202', height: '202' }, { name: '150', height: '150' }, { name: '188', height: '188' } ]
+
+console.log("------------------");
+
+// Get an array of all first names
+
+let firstNames = characters.map((el) => {
+  return el.name.split(" ")[0];
+});
+console.log(firstNames); // ['Luke', 'Darth', 'Leia', 'Anakin']
+
+console.log("------------------");
+
+// Array Filter
+// Array .filter() JavaScript-e tokhon babohar kora hoy jokhon tumi ekta array theke kichu specific condition fulfill kora element-gulo ke ber kore notun ekta array pete chau — mane, original array theke kichu element "filter" kore ber kora.
+
+let number2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNumbers = number2.filter((el) => {
+  return el % 2 == 0; // even number
+});
+console.log(evenNumbers); // [2, 4, 6, 8, 10]
+
+let oddNumbers = number2.filter((el) => {
+  return el % 2 !== 0;
+});
+console.log(oddNumbers); // [1, 3, 5, 7, 9]
+
+console.log("------------------");
+// Problem solving
+
+const characters1 = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Get characters with mass greater than 100
+let massGreaterthan100 = characters1.filter((el) => {
+  return el.mass > 100;
+});
+console.log(massGreaterthan100);
+console.log("------------------");
+//Short way
+
+let GreaterThan100 = characters1.filter((el) => el.mass > 100);
+console.log(GreaterThan100);
+// Get characters with height less than 200
+
+let heightLessThen200 = characters1.filter((el) => el.height < 200);
+console.log(heightLessThen200);
+console.log("------------------");
+// Get all male characters
+
+let allMaleCharacters = characters1.filter((el) => el.gender == "male");
+console.log(allMaleCharacters); // [ { name: 'Luke Skywalker', height: '172', mass: '77', eye_color: 'blue',gender: 'male' }, {name: 'Leia Organa', height: '150', mass: '49', eye_color: 'brown', gender: 'female'}, { name: 'Anakin Skywalker', height: '188', mass: '84', eye_color: 'blue', gender: 'male' } ]
+
+console.log("------------------");
+// Get all female characters
+
+let allFemaleCharacters = characters1.filter((el) => el.gender == "female");
+console.log(allFemaleCharacters); // [{ name: 'Leia Organa', height: '150', mass: '49', eye_color: 'brown', gender: 'female'}]
+
+console.log("------------------");
+
+// Array Every
+// Array .every() tokhon babohar kora hoy jokhon tumi check korte chau je ekta array-r sob item ki ekoi condition fulfill kore — jodi sob item condition pass kore, tahole .every() return kore true, na hole false. -> Bolian value return kore
+
+let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let every = arr5.every((el) => {
+  return el % 2 == 0;
+});
+console.log(every); // false
+
+let arr6 = [2, 4, 6, 8, 10];
+let every1 = arr6.every((el) => {
+  return el % 2 == 0;
+});
+console.log(every1); // true
+
+console.log("------------------");
+//problem solving
+const characters2 = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Does every character have blue eyes?
+let everyBlueEyes = characters2.every((el) => {
+  return el.eye_color == "blue";
+});
+console.log(everyBlueEyes); // false
+
+console.log("------------------");
+// Does every character have mass more than 40?
+let massMoreThen40 = characters2.every((el) => {
+  return el.mass > 40;
+});
+console.log(massMoreThen40); // true
+
+console.log("------------------");
+// Is every character shorter than 200?
+
+let characterShorterThan200 = characters2.every((el) => {
+  return el.height < 200;
+});
+console.log(characterShorterThan200); // true
+
+console.log("------------------");
+// Is every character male?
+let everyMale = characters2.every((el) => {
+  return el.gender == "male";
+});
+console.log(everyMale); // false
+
+console.log("------------------");
+// Array Some
+//Array .some() tokhon babohar kora hoy jokhon tumi check korte chau je array-r moddhe kompakhe ekta item ki specific kono condition fulfill kore. Jodi ekta item-o condition fulfill kore, .some() return kore true; na hole false.
+
+let arr7 = [1, 3, 5, 6, 7, 9];
+let some = arr7.some((el) => {
+  return el % 2 == 0;
+});
+console.log(some); // true
+
+let arr8 = [1, 3, 5, 7, 9];
+let some1 = arr8.some((el) => {
+  return el % 2 == 0;
+});
+console.log(some1); // false
+
+console.log("------------------");
+//problem solving
+
+const characters3 = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Is there at least one male character?
+let oneMaleCharacter = characters3.some((el) => el.gender == "male");
+console.log(oneMaleCharacter); // true
+
+console.log("------------------");
+// Is there at least one character with blue eyes?
+let oneBlueEyes = characters3.some((el) => el.eye_color == "blue");
+console.log(oneBlueEyes); // true
+
+console.log("------------------");
+// Is there at least one character taller than 200?
+let oneTallerThan200 = characters3.some((el) => el.height > 200);
+console.log(oneTallerThan200); // true
+
+console.log("------------------");
+// Is there at least one character that has mass less than 50?
+let oneMassLessThan50 = characters3.some((el) => el.mass < 50);
+console.log(oneMassLessThan50); // true
+
+console.log("------------------");
+
+// Array Sort
+// Array .sort() tokhon babohar kora hoy jokhon tumi ekta array-r moddher item-gulo ke specific order-e sajate chau, ja hote pare ascending (choto theke boro) ba descending (boro theke choto) — string, number, ba object-er kono property er upor vitti kore.
+
+let number3 = [5, 2, 9, 1, 5, 6];
+let sortedNumber = number3.sort((a, b) => a - b);
+console.log(sortedNumber); // [1, 2, 5, 5, 6, 9]
+
+let sortedNumber1 = number3.sort((a, b) => b - a);
+console.log(sortedNumber1);
+
+console.log("------------------");
+//problem solving
+const characters4 = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Sort by name
+let sortByName = characters4.sort((a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+});
+console.log(sortByName);
+
+console.log("------------------");
+// Z to A
+let sortByName1 = characters4.sort((a, b) => {
+  if (a.name > b.name) {
+    return -1;
+  }
+  if (a.name < b.name) {
+    return 1;
+  }
+  return 0;
+});
+console.log(sortByName1);
+
+console.log("------------------");
+// Sort by mass
+
+let sortByMass = characters4.sort((a, b) => a.mass - b.mass);
+console.log(sortByMass);
+
+console.log("------------------");
+
+let sortByMass1 = characters4.sort((a, b) => b.mass - a.mass);
+console.log(sortByMass1);
+
+console.log("------------------");
+// Sort by height
+let shortByHeight = characters4.sort((a, b) => a.height - b.height);
+console.log(shortByHeight);
+
+console.log("------------------");
+// Sort by gender
+// A to Z
+let sortByGender = characters4.sort((a, b) => {
+  if (a.gender < b.gender) {
+    return -1;
+  }
+  if (a.gender > b.gender) {
+    return 1;
+  }
+  return 0;
+});
+console.log(sortByGender);
+
+console.log("------------------");
+// Z to A
+let sortByGender1 = characters4.sort((a, b) => {
+  if (a.gender > b.gender) {
+    return -1;
+  }
+  if (a.gender < b.gender) {
+    return 1;
+  }
+  return 0;
+});
+console.log(sortByGender1);
+
+console.log("------------------");
+//Live Class 25: JavaScript Reduce Method, Execution Context and What to do next
+
+//Array Reduce
+// Array .reduce() tokhon babohar kora hoy jokhon tumi ekta array er upor operation kore ekta single value ber korte chau — seta number, string, object, array kichuoi hote pare.
+// .reduce() are vitor paramiter hisaba accumulator, element, index, array thaka
+// accumulator -> amra sob kisu plus kora jar vitor rakhi taka accumulator bole
+// sob kisu plus korer process k accumulat bole
+
+let number4 = [1, 2, 3, 4, 5];
+let sum = number4.reduce((accumulator, element) => {
+  return accumulator + element; // 1+2+3+4+5 = 15
+}, 0);
+console.log(sum); // 15
+
+let sum1 = number4.reduce((acc, el) => acc + el, 0);
+console.log(sum1); // 15
+
+console.log("------------------");
+//problem solving
+const characters5 = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// Get the total mass of all characters
+
+let totalMass = characters5.reduce((acc, el) => {
+  return acc + Number(el.mass);
+}, 0);
+console.log(totalMass);
+
+console.log("------------------");
+// short weay
+let totalMass1 = characters5.reduce((acc, el) => acc + Number(el.mass), 0);
+console.log(totalMass1);
+
+console.log("------------------");
+// Get the total height of all characters
+let totalHeight = characters5.reduce((acc, el) => acc + Number(el.height), 0);
+console.log(totalHeight);
+
+console.log("------------------");
+// Get the total number of characters in all the character names
+let totalCharacter = characters5.reduce((acc, el) => acc + el.name.length, 0);
+console.log(totalCharacter);
+
+console.log("------------------");
+// Get the total number of characters by eye color (hint. a map of eye color to count)
+let totalEyeColor = characters5.reduce((acc, el) => {
+  if (acc[el.eye_color]) {
+    acc[el.eye_color]++;
+  } else {
+    acc[el.eye_color] = 1;
+  }
+  return acc;
+}, {});
+console.log(totalEyeColor); // { blue: 2, yellow: 1, brown: 1 }
+
+console.log("------------------");
+// Execution Context
+// Execution context holo akta environment jar modha amra function call kori, jate amra function er modha variable, object, array, function use korte pari. Execution context er modha 3 ta part thake
+// 1. Global Execution Context
+// 2. Function Execution Context
+// 3. Eval Execution Context
+// Execution context er modha 2 ta part thake
+// 1. Lexical Environment
+// 2. Dynamic Environment
+// Lexical Environment er modha 2 ta part thake
+// 1. Variable Environment
+// 2. Function Environment
