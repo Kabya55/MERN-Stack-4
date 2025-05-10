@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Project Task Page 2</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      .tech-card img {
+        transition: transform 0.4s ease;
+      }
+
+      .tech-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .tech-card .overlay {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.7),
+          transparent 70%
+        );
+        transition: background 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="py-3 border-bottom">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Left Side: Menu & Search -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-outline-secondary border-0 p-0 d-lg-none">
+              <i class="bi bi-list fs-3"></i>
+            </button>
+            <div class="d-none d-md-block">
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+
+          <!-- Center: Logo -->
+          <a
+            href="#"
+            class="text-dark fw-bold text-decoration-none fs-4 text-uppercase"
+            >Kabya news</a
+          >
+
+          <!-- Right Side: Cart & Subscribe -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-dark position-relative">
+              <i class="bi bi-cart3 fs-5"></i>
+            </a>
+            <a href="#" class="btn btn-dark btn-sm">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation bar start -->
+    <nav class="border-top border-bottom py-2">
+      <div class="container">
+        <div class="d-flex justify-content-center overflow-auto gap-4">
+          <a
+            href="./index.html"
+            class="text-decoration-none text-dark fw-semibold"
+            >Home</a
+          >
+          <a href="#" class="text-decoration-none text-dark fw-semibold"
+            >Sports</a
+          >
+          <a href="#" class="text-decoration-none text-dark fw-semibold"
+            >Politics</a
+          >
+          <a href="#" class="text-decoration-none text-dark fw-semibold"
+            >Business</a
+          >
+          <a href="#" class="text-decoration-none text-dark fw-semibold"
+            >Technology</a
+          >
+          <a href="#" class="text-decoration-none text-dark fw-semibold"
+            >Health</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation bar end -->
+
+    <!-- Hero Section start -->
+    <section class="py-4">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Left: Main Featured News -->
+
+          <div class="col-lg-7">
+            <div class="card border-0">
+              <img
+                src="./img/page4/s1-1.jpg"
+                class="card-img-top"
+                height="350"
+                alt="Main News Image"
+              />
+              <div class="card-body px-0">
+                <h5 class="text-uppercase text-muted small mb-1">Politics</h5>
+                <h3 class="fw-bold mb-2">
+                  Global Climate Summit Yields Mixed Results on Key Agreements
+                </h3>
+
+                <!-- Flex Container: Description + Author Info -->
+                <div class="d-flex flex-column flex-md-row gap-3">
+                  <!-- 60% Description -->
+                  <div class="flex-md-grow-1" style="flex-basis: 60%">
+                    <p class="text-muted mb-0" style="font-size: 0.75rem">
+                      Organizations around the globe responded with mixed
+                      reactions to the summit's climate initiatives and policy
+                      directions.
+                    </p>
+                  </div>
+
+                  <!-- 50% Author Info -->
+                  <div
+                    class="d-flex align-items-center gap-2"
+                    style="flex-basis: 40%"
+                  >
+                    <img
+                      src="./img/page4/Untitled-1.jpg"
+                      alt="Author"
+                      class="rounded-circle"
+                      width="50"
+                      height="50"
+                    />
+                    <div>
+                      <div class="fw-semibold">Michael Beach</div>
+                      <small class="text-muted" style="font-size: 0.7rem"
+                        >March 20, 2025 · 5 min read</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: List of Small News Items -->
+          <div class="col-lg-5">
+            <div class="d-flex flex-column gap-3">
+              <!-- News Item -->
+              <div class="d-flex gap-3">
+                <img
+                  src="./img/page4/s1-2.jpg"
+                  alt="News"
+                  class="flex-shrink-0"
+                  width="180"
+                  height="120"
+                />
+                <div>
+                  <h6 class="fw-semibold mb-1">
+                    Stock Market shifts amid global summit talks
+                  </h6>
+                  <small class="text-muted">Business | ⏱ 2 min read</small>
+                </div>
+              </div>
+
+              <!-- Repeat for more items -->
+              <div class="d-flex gap-3">
+                <img
+                  src="https://img.freepik.com/free-photo/silhouette-woman-with-raised-arms_1134-418.jpg?t=st=1746869544~exp=1746873144~hmac=66e32d8230832b4a305b115115ce2fefb798f34fa4f13dde76047d5545a1f27c&w=996"
+                  alt="News"
+                  class="flex-shrink-0"
+                  width="180"
+                  height="120"
+                />
+                <div>
+                  <h6 class="fw-semibold mb-1">
+                    New Regulations Put Tech Giants Under the Spotlight
+                  </h6>
+                  <small class="text-muted">Technology | ⏱ 6 Min</small>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <img
+                src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041843.jpg?t=st=1746868890~exp=1746872490~hmac=2dceca33345832077b8a5678948c8dd08049be89e4969ec59882f706079110e9&w=996""
+                alt="News" class="flex-shrink-0" width="180" height="120" />
+                <div>
+                  <h6 class="fw-semibold mb-1">
+                    Blockchain Beyond Cryptocurrency: Revolutionizing Industries
+                  </h6>
+                  <small class="text-muted">Technology | ⏱ 5 Min</small>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <img
+                  src="https://img.freepik.com/free-photo/medium-shot-doctor-holding-vial_23-2149994397.jpg?t=st=1746869587~exp=1746873187~hmac=a6520949510aa304ffe29b862694a08c8fa086491e1f4c65f8ee96aa63d5643a&w=1380"
+                  alt="News"
+                  class="flex-shrink-0"
+                  width="180"
+                  height="120"
+                />
+                <div>
+                  <h6 class="fw-semibold mb-1">
+                    Health Innovations to Watch in 2024
+                  </h6>
+                  <small class="text-muted"> Health | ⏱ 7 Min</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- Latest News Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Latest News</h2>
+        <div class="row">
+          <!-- Large Card on the Left -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="card h-100 border-0 shadow">
+              <img
+                src="https://img.freepik.com/free-photo/gorgeous-arrangement-flowers-wallpaper_23-2149057015.jpg?t=st=1746870194~exp=1746873794~hmac=75bab8ec3ed2b8c52655b1923bb5b5151c39917d178bddeaba9f1cd06cf0de70&w=996"
+                class="card-img-top"
+                style="height: 300px"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Global Summit 2024: Leaders Address Climate, Trade, and
+                  Security Challenges
+                </h5>
+                <p class="card-text">
+                  Brief summary of the article goes here...
+                </p>
+                <small class="text-muted">By Author • 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2x2 Grid of Small Cards -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <!-- Small Card 1 -->
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://img.freepik.com/free-photo/medium-shot-doctor-holding-vial_23-2149994397.jpg?t=st=1746869587~exp=1746873187~hmac=a6520949510aa304ffe29b862694a08c8fa086491e1f4c65f8ee96aa63d5643a&w=1380"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">Headline 1</h6>
+                    <small class="text-muted">Author • 4 mins ago</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Small Card 2 -->
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041843.jpg?t=st=1746868890~exp=1746872490~hmac=2dceca33345832077b8a5678948c8dd08049be89e4969ec59882f706079110e9&w=996"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">Headline 2</h6>
+                    <small class="text-muted">Author • 5 mins ago</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Small Card 3 -->
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://img.freepik.com/free-photo/silhouette-woman-with-raised-arms_1134-418.jpg?t=st=1746869544~exp=1746873144~hmac=66e32d8230832b4a305b115115ce2fefb798f34fa4f13dde76047d5545a1f27c&w=996"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">Headline 3</h6>
+                    <small class="text-muted">Author • 6 mins ago</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Small Card 4 -->
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="./img/page4/s1-2.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">Headline 4</h6>
+                    <small class="text-muted">Author • 7 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest News Section end -->
+
+    <!-- Blockchain Section start -->
+    <section class="py-5" style="background-color: #dc4c3e">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row g-0">
+              <!-- Content -->
+              <div
+                class="col-md-4 d-flex flex-column justify-content-center p-4 text-white"
+              >
+                <h4 class="mb-3">
+                  Blockchain Beyond Cryptocurrency: Revolutionizing Industries
+                </h4>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  labore natus doloribus, pariatur alias eum! Ducimus obcaecati
+                  praesentium accusantium sint.
+                </p>
+                <div
+                  class="d-flex align-items-center gap-2"
+                  style="flex-basis: 40%"
+                >
+                  <img
+                    src="./img/page4/Untitled-1.jpg"
+                    alt="Author"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                  <div>
+                    <div class="fw-semibold">Michael Beach</div>
+                    <small class="text-muted" style="font-size: 0.7rem"
+                      >March 20, 2025 · 5 min read</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="col-md-8">
+                <img
+                  src="./img/page4/s1-1.jpg"
+                  class="img-fluid w-100 h-100 object-fit-cover"
+                  alt="Featured"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blockchain Section end -->
+
+    <!-- Editors Pick Section Start -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <!-- Section Heading -->
+        <h3 class="mb-4 fw-bold">Editors Pick</h3>
+
+        <!-- Top Large Card -->
+        <div class="card mb-4 border-0 shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex flex-column justify-content-center p-4">
+              <h5 class="card-title">
+                5G Expansion: What It Means for Consumers and Businesses
+              </h5>
+              <p class="card-text text-muted">
+                From faster downloads to smarter cities, 5G is reshaping global
+                connectivity.
+              </p>
+              <small class="text-secondary">Technology • 5 min</small>
+            </div>
+
+            <div class="col-md-8">
+              <img
+                src="https://img.freepik.com/free-photo/technology-particle-dots-5g-digital-corporate-background_53876-102624.jpg?t=st=1746870764~exp=1746874364~hmac=e28c837da3874b4fe7188b275772fdfe615fbed78e0bb566aa52693b6f800efc&w=996"
+                class="img-fluid h-100 w-100 object-fit-cover"
+                alt="5G Expansion"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom 3 Cards in a Row -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="https://img.freepik.com/free-photo/cricket-equipment-digital-art_23-2151761185.jpg?t=st=1746870869~exp=1746874469~hmac=537de93ca50453634b1ab16ef9408936cb6d0b6bbb4e173d1f0c4d931ad90f94&w=826"
+                class="card-img-top"
+                alt="Cricket"
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Cricket World Cup: Highlights from an Action-Packed Week
+                </h6>
+                <small class="text-secondary">Sports | 3 min</small>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="https://img.freepik.com/premium-photo/relaxing-night-scene-man-sleeping-peacefully-with-cool-blue-neural-network-his-head-re_981101-98320.jpg?w=996"
+                class="card-img-top"
+                alt="Sleep Science"
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  The Science of Sleep: How to Rest Better in a 24/7 World
+                </h6>
+                <small class="text-secondary">Technology • 4 min</small>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="https://img.freepik.com/free-photo/exploration-settlements-different-planets_23-2151768661.jpg?t=st=1746870981~exp=1746874581~hmac=2c17b39d98d2dabccd405eed2c4e5558cf4847593a276ff8a0275c313b0dacdb&w=1380"
+                class="card-img-top"
+                alt="Space Exploration"
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Exploring the Future of Space Exploration Beyond Mars
+                </h6>
+                <small class="text-secondary">Technology • 5 min</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Editors Pick Section End -->
+
+    <!-- Technology section start -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Header Row -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4 class="fw-bold">Technology</h4>
+          <a href="#" class="text-decoration-none text-primary">View All</a>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 330px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/technology-particle-dots-5g-digital-corporate-background_53876-102624.jpg?t=st=1746870764~exp=1746874364~hmac=e28c837da3874b4fe7188b275772fdfe615fbed78e0bb566aa52693b6f800efc&w=996"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="5G Expansion"
+              />
+              <div
+                class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3"
+              >
+                <small class="text-white">Softa Ramirez • 4 Min</small>
+                <h6 class="text-white fw-semibold">
+                  5G Expansion: What It Means for Consumers and Businesses
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 250px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041843.jpg?t=st=1746868890~exp=1746872490~hmac=2dceca33345832077b8a5678948c8dd08049be89e4969ec59882f706079110e9&w=996"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="Blockchain"
+              />
+            </div>
+            <div>
+              <small class="text-primary">Lüvan Cullina • 3 Min</small>
+              <h6 class="text-dark fw-semibold">
+                Blockchain Beyond Cryptocurrency: Revolutionizing Industries
+              </h6>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 250px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/exploration-settlements-different-planets_23-2151768661.jpg?t=st=1746870981~exp=1746874581~hmac=2c17b39d98d2dabccd405eed2c4e5558cf4847593a276ff8a0275c313b0dacdb&w=1380"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="Blockchain"
+              />
+            </div>
+            <div>
+              <small class="text-primary">Darah Lev • 3 Min</small>
+              <h6 class="text-dark fw-semibold">
+                Exploring the Future of Space Exploration Beyond Mars
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technology section end -->
+
+    <!-- Staff Writers section start -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Header Row -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4 class="fw-bold">Staff Writers</h4>
+          <a href="#" class="text-decoration-none text-primary">View All</a>
+        </div>
+
+        <!-- Staff Cards -->
+        <div class="row g-4">
+          <!-- Staff Member 1 -->
+          <div class="col-sm-6 col-lg-3">
+            <div>
+              <img
+                src="./img/page4/IMG_0553.jpg"
+                alt="Kabya Kishor Halder"
+                class="img-fluid mb-3"
+                style="width: 320px; height: 320px; object-fit: cover"
+              />
+              <h6 class="fw-semibold mb-1">Kabya Kishor Halder</h6>
+              <small class="text-muted">Senior Programmer </small>
+            </div>
+          </div>
+
+          <!-- Staff Member 2 -->
+          <div class="col-sm-6 col-lg-3">
+            <div>
+              <img
+                src="./img/page4/Untitled-1.jpg"
+                alt="Kabita Sikder"
+                class="img-fluid mb-3"
+                style="width: 320px; height: 320px; object-fit: cover"
+              />
+              <h6 class="fw-semibold mb-1">Kabita Sikder</h6>
+              <small class="text-muted">Author</small>
+            </div>
+          </div>
+
+          <!-- Staff Member 3 -->
+          <div class="col-sm-6 col-lg-3">
+            <div>
+              <img
+                src="./img/page4/Saidur Rahman Setu .jpg"
+                alt="Saidur Rahman Setu"
+                class="img-fluid mb-3"
+                style="width: 320px; height: 320px; object-fit: cover"
+              />
+              <h6 class="fw-semibold mb-1">Saidur Rahman Setu</h6>
+              <small class="text-muted">Editorialist</small>
+            </div>
+          </div>
+
+          <!-- Staff Member 4 -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="">
+              <img
+                src="./img/page4/tk copy.jpg"
+                alt="TK Halder"
+                class="img-fluid mb-3"
+                style="width: 320px; height: 320px; object-fit: cover"
+              />
+              <h6 class="fw-semibold mb-1">TK Halder</h6>
+              <small class="text-muted">Content Writer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Staff Writers section end -->
+
+    <!-- Articles section start -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h4 class="fw-bold mb-4">Articles & Resources</h4>
+        <hr class="my-4" />
+        <!-- Article 1 -->
+        <div class="row mb-5 align-items-center">
+          <!-- Text Column -->
+          <div class="col-md-6">
+            <small class="text-muted">Technology • December 16, 2004</small>
+            <h5 class="fw-semibold mt-2">
+              5 Cutting-Edge Technologies in Education Transforming How We Learn
+            </h5>
+            <p class="text-muted">Classwork</p>
+            <a href="#" class="text-primary text-decoration-none fw-semibold"
+              >Read More</a
+            >
+          </div>
+          <!-- Image Column -->
+          <div class="col-md-6">
+            <img
+              src="https://img.freepik.com/free-photo/futuristic-portrait-young-girl-with-high-tech_23-2151133554.jpg?t=st=1746871859~exp=1746875459~hmac=48909ffdcb2191e742077751e26aab672c8df2efa0f2417b81446d84ec7e9ae9&w=1380"
+              alt="Education"
+              class="img-fluid w-100 rounded"
+            />
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <!-- Article 2 -->
+        <div class="row mb-5 align-items-center">
+          <!-- Text Column -->
+          <div class="col-md-6 order-md-1">
+            <small class="text-muted">Health • December 30, 2024</small>
+            <h5 class="fw-semibold mt-2">
+              How AI is Revolutionizing Healthcare: Improving Diagnostics and
+              Patient Care
+            </h5>
+            <a href="#" class="text-primary text-decoration-none fw-semibold"
+              >Read More</a
+            >
+          </div>
+          <!-- Image Column -->
+          <div class="col-md-6 order-md-2">
+            <img
+              src="https://img.freepik.com/free-photo/medical-banner-with-doctor-working-laptop_23-2149611211.jpg?t=st=1746871903~exp=1746875503~hmac=22ce158f37aa3816d0b6a59a64493e96f2375f4fd6e7d8c5a3d03ce60241864e&w=996"
+              alt="Healthcare"
+              class="img-fluid w-100 rounded"
+            />
+          </div>
+        </div>
+        <hr class="my-4" />
+        <!-- Article 3 -->
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="col-md-6">
+            <small class="text-muted">Business • December 26, 2004</small>
+            <h5 class="fw-semibold mt-2">
+              The Rise of Remote Work: The Shift to Flexible Work Environments
+            </h5>
+            <a href="#" class="text-primary text-decoration-none fw-semibold"
+              >Read More</a
+            >
+          </div>
+          <!-- Image Column -->
+          <div class="col-md-6">
+            <img
+              src="https://img.freepik.com/free-photo/close-up-virtual-classroom_23-2149175669.jpg?t=st=1746871965~exp=1746875565~hmac=be4383b6d688628af295cbadaf2120f572a55fe8d96b86853d3a863a2d1fe84c&w=996"
+              alt="Remote Work"
+              class="img-fluid w-100 rounded"
+            />
+          </div>
+        </div>
+        <hr class="my-4" />
+      </div>
+    </section>
+    <!-- Articles section end -->
+
+    <!-- Stay Informed section start -->
+    <section class="py-5 bg-light">
+      <div
+        class="container"
+        style="background-color: #dc4c3e; padding: 5rem; border-radius: 0.5rem"
+      >
+        <div class="row justify-content-between align-items-center">
+          <!-- Left Side (50%) -->
+          <div class="col-md-6 mb-4 mb-md-0 text-white">
+            <h4 class="fw-bold">
+              Stay informed with our latest news and updates.
+            </h4>
+            <p class="mb-0">
+              Get breaking news and curated stories delivered to your inbox
+              every day. Be the first to know what's happening around the world.
+            </p>
+          </div>
+
+          <!-- Right Side (30%) -->
+          <div class="col-md-5">
+            <form class="d-flex flex-column gap-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your Email"
+                required
+              />
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stay Informed section end -->
+
+    <!-- Podcast section start -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Header Row -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4 class="fw-bold">Podcast</h4>
+          <a href="#" class="text-decoration-none text-primary">View All</a>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 450px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/athlete-standing-all-weather-running-track_1150-14632.jpg?t=st=1746872368~exp=1746875968~hmac=3aedcad5ccc6c047c57d32ba6c3056ff18b639c95c4fa638523f9e39ee585bfb&w=996"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="5G Expansion"
+              />
+              <div
+                class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3"
+              >
+                <small class="text-white"> Sports |⏱ 8 Min</small>
+                <h6
+                  class="text-white fw-semibold d-flex justify-content-between align-items-center"
+                >
+                  The Challenges and opportunities of professional
+                  <span
+                    ><i class="bi bi-play-circle-fill text-danger fs-1"></i
+                  ></span>
+                </h6>
+              </div>
+            </div>
+
+            <div>
+              <small class="text-primary">Sports |⏱ 8 Min </small>
+              <h6 class="text-dark fw-semibold">
+                The Challenges and opportunities of professional
+              </h6>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 450px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/online-shopping-concept_23-2151896842.jpg?t=st=1746872595~exp=1746876195~hmac=871bf1fd8829817faefd8cd61d60f477d7c8dbc864748faee417fe543d94cecc&w=1060"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="5G Expansion"
+              />
+              <div
+                class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3"
+              >
+                <small class="text-white">Softa Ramirez |⏱ 5 Min</small>
+                <h6
+                  class="text-white fw-semibold d-flex justify-content-between align-items-center"
+                >
+                  E - Commerce Growth: The Future of Online Shopping
+                  <span
+                    ><i class="bi bi-play-circle-fill text-danger fs-1"></i
+                  ></span>
+                </h6>
+              </div>
+            </div>
+            <div>
+              <small class="text-primary">Lüvan Cullina |⏱ 3 Min</small>
+              <h6 class="text-dark fw-semibold">
+                E - Commerce Growth: The Future of Online Shopping
+              </h6>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div
+              class="tech-card position-relative overflow-hidden rounded"
+              style="height: 450px"
+            >
+              <img
+                src="https://img.freepik.com/free-photo/technology-particle-dots-5g-digital-corporate-background_53876-102624.jpg?t=st=1746870764~exp=1746874364~hmac=e28c837da3874b4fe7188b275772fdfe615fbed78e0bb566aa52693b6f800efc&w=996"
+                class="img-fluid w-100 h-100 object-fit-cover transition"
+                alt="5G Expansion"
+              />
+              <div
+                class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3"
+              >
+                <small class="text-white">Softa Ramirez |⏱ 4 Min </small>
+                <h6
+                  class="text-white fw-semibold d-flex justify-content-between align-items-center"
+                >
+                  5G Expansion: What It Means for Consumers and Businesses
+                  <span
+                    ><i class="bi bi-play-circle-fill text-danger fs-1"></i
+                  ></span>
+                </h6>
+              </div>
+            </div>
+            <div>
+              <small class="text-primary"> Softa Ramirez |⏱ 4 Min</small>
+              <h6 class="text-dark fw-semibold">
+                5G Expansion: What It Means for Consumers and Businesses
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Podcast section end -->
+
+    <!-- Footer section start -->
+    <footer class="bg-dark text-light">
+      <!-- Row 1: Logo + Navigation -->
+      <div class="container py-4 border-bottom border-secondary">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <h2 class="mb-0">Kabya News</h2>
+          </div>
+          <div class="col-md-8">
+            <ul class="list-inline d-flex justify-content-end gap-4 mb-0">
+              <li class="list-inline-item">
+                <a href="./index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a href="./index.html" class="text-light text-decoration-none"
+                  >News</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-light text-decoration-none">Authors</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-light text-decoration-none">Podcast</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Content Sections -->
+      <div class="container py-5 border-bottom border-secondary">
+        <div class="row g-5">
+          <!-- Left Images -->
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-4">
+                <img
+                  src="https://img.freepik.com/premium-photo/trees-growing-forest_1048944-30368869.jpg?w=996"
+                  class="img-fluid rounded"
+                  alt="News image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://img.freepik.com/premium-photo/deer-standing-field_1048944-29069730.jpg?w=996"
+                  class="img-fluid rounded"
+                  alt="News image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://img.freepik.com/free-photo/amazing-bengal-tiger-nature_475641-1137.jpg?t=st=1746873182~exp=1746876782~hmac=473fdb11bae0bf1ef8c2e03cd64862f0cf6c89cca29749f66778dc35ebc60210&w=996"
+                  class="img-fluid rounded"
+                  alt="News image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Columns -->
+          <div class="col-lg-6">
+            <div class="row h-100 g-4">
+              <!-- Left Menu -->
+              <div class="col-md-6">
+                <h5 class="mb-3">Pages</h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#" class="text-secondary text-decoration-none"
+                      >About Us</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-secondary text-decoration-none"
+                      >News</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-secondary text-decoration-none"
+                      >Authors</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-secondary text-decoration-none"
+                      >Podcast</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-secondary text-decoration-none"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Right Contact/Social -->
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <h5 class="mb-3">Contact Us</h5>
+                  <p class="text-secondary mb-1">kabyakishor017@gmail.com</p>
+                  <p class="text-secondary">+8801750084574</p>
+                </div>
+
+                <div>
+                  <h5 class="mb-3">Follow Us</h5>
+                  <div class="d-flex gap-3">
+                    <a
+                      href="#"
+                      class="social-icon rounded-circle d-flex align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="social-icon rounded-circle d-flex align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="social-icon rounded-circle d-flex align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="social-icon rounded-circle d-flex align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Copyright -->
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <span class="text-secondary"
+              >© 2024 Kabya. All rights reserved.</span
+            >
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-secondary text-decoration-none me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-secondary text-decoration-none"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
