@@ -1,0 +1,7 @@
+// Generate Incomplete To-Do App
+
+ <li class="item"><input type="checkbox" /><label>Task Name 1</label></li>
+
+//Generate Complete To-Do
+
+ <li class="item">Task Name <button class="delete">Delete</button></li>
