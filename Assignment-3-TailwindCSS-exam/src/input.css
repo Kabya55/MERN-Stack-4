@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer components {
+  .bg-img {
+    background-image: url("../image/hero\ section\ bg.jpg");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}
+
+@layer components {
+  .bg-img2 {
+    background-image: url("../image/Save\ Big\ on\ Your\ Next\ HVAC\ Project1.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}
+@layer components {
+  .bg-img3 {
+    background-image: url("../image/How\ We\ Bring\ Comfort\ to\ Your\ Home1.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}
+
+@layer components {
+  .bg-img4 {
+    background-image: url("../image/How\ We\ Bring\ Comfort\ to\ Your\ Home2.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}
+@layer components {
+  .bg-img5 {
+    background-image: url("../image/How\ We\ Bring\ Comfort\ to\ Your\ Home3.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}
+@layer components {
+  .bg-img6 {
+    background-image: url("../image/How\ We\ Bring\ Comfort\ to\ Your\ Home4.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+  }
+}

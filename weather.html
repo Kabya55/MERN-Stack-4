@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>৫ দিনের আবহাওয়া পূর্বাভাস</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen p-6">
+    <h1 class="text-3xl font-bold text-center mb-6">
+      ৫ দিনের আবহাওয়া পূর্বাভাস
+    </h1>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      id="weatherGrid"
+    ></div>
+
+    <script>
+      const cities = [
+        { name: "Dhaka", style: "bg-indigo-500" },
+        { name: "Barisal", style: "bg-green-500" },
+        { name: "Pirojpur", style: "bg-pink-500" },
+        {
+          name: "Swarupkathi",
+          style:
+            "bg-[linear-gradient(to_right_top,#d16ba5,#c777b9,#ba83ca,#aa8fd8,#9a9ae1,#8aa7ec,#79b3f4,#69bff8,#52cffe,#41dfff,#46eefa,#5ffbf1)]",
+        },
+        { name: "Nazirpur", style: "bg-red-400" },
+      ];
+
+      const API_KEY = "5288e3afc23812d30f45398adb0a2362"; // আপনার API Key
+
+      const container = document.getElementById("weatherGrid");
+
+      cities.forEach((city) => {
+        fetch(
+          `https://api.openweathermap.org/data/2.5/forecast?q=${city.name}&appid=${API_KEY}&units=metric`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const box = document.createElement("div");
+            box.className = `${city.style} text-white p-4 rounded-xl shadow-lg`;
+
+            const forecasts = {};
+
+            data.list.forEach((item) => {
+              const date = item.dt_txt.split(" ")[0];
+              if (!forecasts[date]) forecasts[date] = item;
+            });
+
+            let content = "";
+            const dates = Object.keys(forecasts).slice(0, 5);
+
+            dates.forEach((dateStr) => {
+              const item = forecasts[dateStr];
+              const date = new Date(item.dt * 1000);
+              const dayName = date.toLocaleDateString("bn-BD", {
+                weekday: "short",
+                month: "short",
+                day: "numeric",
+              });
+
+              content += `
+              <div class="flex items-center justify-between mt-2 text-sm border-b border-white/30 pb-1">
+                <span>${dayName}</span>
+                <img src="https://openweathermap.org/img/wn/${
+                  item.weather[0].icon
+                }.png" alt="${item.weather[0].description}" class="w-6 h-6" />
+                <span>${Math.round(item.main.temp_max)}° / ${Math.round(
+                item.main.temp_min
+              )}°C</span>
+                <span>${item.weather[0].description}</span>
+              </div>
+            `;
+            });
+
+            box.innerHTML = `<h2 class="text-2xl font-bold mb-2">${data.city.name}</h2>${content}`;
+            container.appendChild(box);
+          })
+          .catch((err) => {
+            const errorBox = document.createElement("div");
+            errorBox.className = `${city.style} text-white p-4 rounded-xl shadow-lg`;
+            errorBox.innerHTML = `<h2 class="text-xl font-bold">${city.name}</h2><p>তথ্য লোড হয়নি</p>`;
+            container.appendChild(errorBox);
+          });
+      });
+    </script>
+  </body>
+</html>
