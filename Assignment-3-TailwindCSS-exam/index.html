@@ -13,162 +13,168 @@
   <body class="">
     <!-- Navbar -->
     <div class="bg-img bg-cover bg-center top-0 py-1">
-      <nav
-        class="bg-white rounded-full shadow px-6 py-3 ml-8 mr-8 max-w-6xl mx-auto mt-4 relative z-50"
-      >
-        <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <div class="text-green-900 text-xl font-semibold">CoolQuest</div>
+      <div class="max-w-6xl mx-auto">
+        <nav
+          class="bg-white rounded-full shadow px-6 py-3 ml-8 mr-8 max-w-6xl mx-auto mt-4 relative z-50"
+        >
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-green-900 text-xl font-semibold">CoolQuest</div>
 
-          <!-- Desktop Menu -->
-          <div class="hidden md:flex space-x-6 text-md text-black font-medium">
+            <!-- Desktop Menu -->
+            <div
+              class="hidden md:flex space-x-6 text-md text-black font-medium"
+            >
+              <a href="#" class="hover:text-green-700">About Us</a>
+              <a href="#" class="hover:text-green-700">Services</a>
+              <a href="#" class="hover:text-green-700">Past Work</a>
+              <a href="#" class="hover:text-green-700">Reviews</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a
+              href="#"
+              class="hidden md:inline-block bg-green-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-800"
+            >
+              Get Free Quote
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="menu-btn"
+              class="md:hidden text-green-900 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Slide-in Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="fixed top-12 right-0 h-auto w-64 bg-white rounded-l-2xl shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden"
+        >
+          <div
+            class="flex flex-col p-6 space-y-4 text-black text-md font-medium"
+          >
+            <!-- Close Button -->
+            <button
+              id="close-btn"
+              class="self-end text-4xl font-bold text-green-900"
+            >
+              x
+            </button>
             <a href="#" class="hover:text-green-700">About Us</a>
             <a href="#" class="hover:text-green-700">Services</a>
             <a href="#" class="hover:text-green-700">Past Work</a>
             <a href="#" class="hover:text-green-700">Reviews</a>
+            <a
+              href="#"
+              class="bg-green-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-800 w-max"
+            >
+              Get Free Quote
+            </a>
           </div>
+        </div>
 
-          <!-- CTA Button -->
-          <a
-            href="#"
-            class="hidden md:inline-block bg-green-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-800"
-          >
-            Get Free Quote
-          </a>
+        <!-- Overlay when menu is open -->
+        <div id="overlay" class="fixed inset-0 z-30 md:hidden"></div>
 
-          <!-- Mobile Menu Button -->
-          <button
-            id="menu-btn"
-            class="md:hidden text-green-900 focus:outline-none"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
+        <!-- hero section -->
+        <section
+          class="grid grid-cols-1 p-6 max-w-6xl mx-auto mt-4 ml-4 mr-4 md:grid-cols-2 gap-4"
+        >
+          <!-- left side start -->
+          <div class="space-y-6 mt-6">
+            <h1 class="text-4xl font-bold text-white">
+              Reliable HVAC for Every Season
+            </h1>
+            <p class="flex gap-2 text-white md:text-xl">
+              <img
+                class="w-[25px] h-[25px]"
+                src="./image/checkmark-badge-01.png"
+                alt="checkmark"
               />
-            </svg>
-          </button>
-        </div>
-      </nav>
+              Certified & Experienced Technicians
+            </p>
+            <p class="flex gap-2 text-white md:text-xl">
+              <img
+                class="w-[25px] h-[25px]"
+                src="./image/alarm-clock.png"
+                alt="alarm"
+              />
+              Fast, Reliable Services
+            </p>
+            <p class="flex gap-2 text-white md:text-xl">
+              <img
+                w-[25px]
+                h-[25px]
+                src="./image/hot-price.png"
+                alt="hot-price"
+              />
+              Transparent, Affordable Pricing
+            </p>
+            <form
+              class="grid grid-cols-2 gap-2 bg-white p-4 rounded-lg shadow-md w-full md:w-[75%]"
+            >
+              <input
+                class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
+                type="name"
+                placeholder="Name"
+              />
 
-      <!-- Slide-in Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="fixed top-12 right-0 h-auto w-64 bg-white rounded-l-2xl shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden"
-      >
-        <div class="flex flex-col p-6 space-y-4 text-black text-md font-medium">
-          <!-- Close Button -->
-          <button
-            id="close-btn"
-            class="self-end text-4xl font-bold text-green-900"
-          >
-            x
-          </button>
-          <a href="#" class="hover:text-green-700">About Us</a>
-          <a href="#" class="hover:text-green-700">Services</a>
-          <a href="#" class="hover:text-green-700">Past Work</a>
-          <a href="#" class="hover:text-green-700">Reviews</a>
-          <a
-            href="#"
-            class="bg-green-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-800 w-max"
-          >
-            Get Free Quote
-          </a>
-        </div>
+              <input
+                class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
+                type="number"
+                placeholder="Phone Number"
+              />
+
+              <select
+                class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
+                name="Services"
+                id=""
+              >
+                <option value="" disabled selected>Select a Service</option>
+                <option value="installation">Installation</option>
+                <option value="repair">Repair</option>
+                <option value="maintenance">Maintenance</option>
+              </select>
+
+              <button
+                class="bg-green-900 text-white px-6 py-2 rounded-lg hover:bg-green-800 transition-colors"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+            <p class="text-md text-white md:text-xl">Certified Installer</p>
+            <img src="./image/logos.png" alt="logos" />
+          </div>
+          <!-- left side end -->
+
+          <!-- right side start -->
+          <div>
+            <img
+              class="w-full h-auto rounded-lg shadow-lg"
+              src="./image/hero content right.png"
+              alt="Hero Image"
+            />
+          </div>
+          <!-- right side end -->
+        </section>
       </div>
-
-      <!-- Overlay when menu is open -->
-      <div id="overlay" class="fixed inset-0 z-30 md:hidden"></div>
-
-      <!-- hero section -->
-      <section
-        class="grid grid-cols-1 p-6 max-w-6xl mx-auto mt-4 ml-4 mr-4 md:grid-cols-2 gap-4"
-      >
-        <!-- left side start -->
-        <div class="space-y-6 mt-6">
-          <h1 class="text-4xl font-bold text-white">
-            Reliable HVAC for Every Season
-          </h1>
-          <p class="flex gap-2 text-white md:text-xl">
-            <img
-              class="w-[25px] h-[25px]"
-              src="./image/checkmark-badge-01.png"
-              alt="checkmark"
-            />
-            Certified & Experienced Technicians
-          </p>
-          <p class="flex gap-2 text-white md:text-xl">
-            <img
-              class="w-[25px] h-[25px]"
-              src="./image/alarm-clock.png"
-              alt="alarm"
-            />
-            Fast, Reliable Services
-          </p>
-          <p class="flex gap-2 text-white md:text-xl">
-            <img
-              w-[25px]
-              h-[25px]
-              src="./image/hot-price.png"
-              alt="hot-price"
-            />
-            Transparent, Affordable Pricing
-          </p>
-          <form
-            class="grid grid-cols-2 gap-2 bg-white p-4 rounded-lg shadow-md w-full md:w-[75%]"
-          >
-            <input
-              class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
-              type="name"
-              placeholder="Name"
-            />
-
-            <input
-              class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
-              type="number"
-              placeholder="Phone Number"
-            />
-
-            <select
-              class="flex-1 px-4 py-2 rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-green-900"
-              name="Services"
-              id=""
-            >
-              <option value="" disabled selected>Select a Service</option>
-              <option value="installation">Installation</option>
-              <option value="repair">Repair</option>
-              <option value="maintenance">Maintenance</option>
-            </select>
-
-            <button
-              class="bg-green-900 text-white px-6 py-2 rounded-lg hover:bg-green-800 transition-colors"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-          <p class="text-md text-white md:text-xl">Certified Installer</p>
-          <img src="./image/logos.png" alt="logos" />
-        </div>
-        <!-- left side end -->
-
-        <!-- right side start -->
-        <div>
-          <img
-            class="w-full h-auto rounded-lg shadow-lg"
-            src="./image/hero content right.png"
-            alt="Hero Image"
-          />
-        </div>
-        <!-- right side end -->
-      </section>
     </div>
 
     <!-- Trusted section start -->
@@ -808,39 +814,39 @@
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 ml-8 mr-8 gap-4 py-12"
         >
-          <!--7st div-->
-          <button
-            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-1 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
-          >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
-            Las Vegas
-          </button>
           <!--1st div-->
           <button
             class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-1 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
+            <img class="pr-1" src="./image/location-03.png" alt="location" />
             Los Angeles
           </button>
           <!--2st div-->
           <button
-            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-1 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
+            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-2 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
-            San Diego
+            <img class="pr-2" src="./image/location-03.png" alt="location" />
+            Sacramento
           </button>
-          <!--4st div-->
+          <!--3st div-->
           <button
             class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-1 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-2" src="./image/location-03.png" alt="location" />
-            San Francisco
+            <img class="pr-3" src="./image/location-03.png" alt="location" />
+            San Jose
           </button>
-          <!--5st div-->
+          <!--4st div-->
           <button
             class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-4 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
             <img class="pr-3" src="./image/location-03.png" alt="location" />
+            Phoenix
+          </button>
+          <!--5st div-->
+          <button
+            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-2 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
+          >
+            <img class="pr-2" src="./image/location-03.png" alt="location" />
             Sacramento
           </button>
           <!--6st div-->
@@ -882,7 +888,7 @@
           <button
             class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-1 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
+            <img class="pr-2" src="./image/location-03.png" alt="location" />
             San Antonio
           </button>
           <!--12st div-->
@@ -894,16 +900,16 @@
           </button>
           <!--13st div-->
           <button
-            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-4 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
+            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-2 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
+            <img class="pr-2" src="./image/location-03.png" alt="location" />
             Jacksonville
           </button>
           <!--14st div-->
           <button
-            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-4 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
+            class="flex border-1 border-[#0b5d1b] text-[#0b5d1b] py-2 px-2 rounded-full hover:border-[#0b5d1b] hover:border-2 text-lg font-md"
           >
-            <img class="pr-3" src="./image/location-03.png" alt="location" />
+            <img class="pr-2" src="./image/location-03.png" alt="location" />
             Indianapolis
           </button>
           <!--15st div-->
