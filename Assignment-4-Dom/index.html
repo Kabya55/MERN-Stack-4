@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-4-Dom</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+
+  <body>
+    <nav class="pt-3 pb-3 flex justify-center bg-gray-50">
+      <img class="w-30" src="./img/logo.png" alt="Logo" />
+    </nav>
+
+    <!-- Hero Section section start-->
+    <section class="bg-img">
+      <div
+        class="pt-20 pb-20 flex flex-col items-center bg-[#a2b3c93a] text-white text-center"
+      >
+        <h1 class="text-3xl font-bold pb-3">
+          Search Your <br />
+          Favorite Recipe
+        </h1>
+        <p>
+          A handful of simple ingredients typify the fresh, vibrant <br />
+          flavors of Greek cooking
+        </p>
+      </div>
+    </section>
+    <!-- Hero Section section end-->
+
+    <!-- search section start-->
+    <section class="bg-gray-50">
+      <div class="flex justify-center pt-10 pb-10">
+        <input
+          id="searchInput"
+          class="w-1/2 border-2 border-gray-400 px-5 py-3 rounded-md"
+          type="text"
+          placeholder="Search Your Favorite Recipe"
+        />
+        <button
+          id="searchBtn"
+          class="bg-amber-300 text-white px-5 py-3 rounded-md"
+        >
+          🔍
+        </button>
+      </div>
+    </section>
+    <!-- search section end-->
+
+    <!--Scroll to top btn-->
+    <button
+      id="scrollToTopBtn"
+      class="hidden fixed bottom-4 right-4 bg-amber-300 text-white px-4 py-2 rounded-full duration-500"
+    >
+      🔝 Top
+    </button>
+
+    <!--Latest Recipes section start-->
+    <section class="bg-gray-50">
+      <div class="flex justify-center pb-8">
+        <h1 class="text-3xl font-bold">Latest Recipes</h1>
+      </div>
+      <div id="Loading" class="grid place-items-center col-span-full">
+        <div
+          class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"
+        ></div>
+      </div>
+      <div
+        id="milContainer"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-gray-100"
+      >
+        <!-- Card Start -->
+        <!-- <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img
+            src="./img/card.jpg"
+            alt="Migas"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">Migas</h2>
+            <p class="text-sm text-gray-600 mt-2">
+              Crumble the bread into small pieces. Sprinkle with cold water,
+              cover with a damp cloth and leave for
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button
+                class="bg-yellow-400 hover:bg-yellow-500 text-white font-medium py-1 px-2 rounded"
+              >
+                VIEW DETAILS
+              </button>
+            </div>
+          </div>
+        </div> -->
+        <!-- Card End -->
+
+        <!-- Duplicate more cards as needed -->
+      </div>
+    </section>
+    <!--Latest Recipes section end-->
+
+    <!--popup section start-->
+    <div
+      id="popup"
+      class="fixed inset-0 overflow-y-auto bg-black bg-opacity-50 z-50 hidden items-start justify-center"
+    >
+      <div class="bg-white p-4 rounded-md max-w-2xl w-full relative">
+        <button
+          id="closePopup"
+          class="absolute bottom-2 right-2 text-xl py-1 text-white rounded px-4 bg-yellow-300"
+        >
+          close
+        </button>
+        <h2 id="popupTitle" class="text-lg font-semibold mb-2"></h2>
+        <img
+          id="popupImage"
+          class="w-full h-40 object-cover mb-4 rounded"
+          src=""
+          alt=""
+        />
+        <p id="popupDescription" class="text-sm text-gray-600 mb-5"></p>
+      </div>
+    </div>
+
+    <!--Footer section start-->
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto px-4 flex items-center justify-between">
+        <p class="text-sm">Copyright © 2025 - All rights reserved by Kabya</p>
+        <div class="flex space-x-4">
+          <!-- Replace these with icons from Heroicons, Font Awesome, or inline SVGs -->
+          <a href="#" aria-label="Twitter" class="hover:text-blue-400">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="YouTube" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" aria-label="Facebook" class="hover:text-blue-600">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!--Footer section end-->
+
+    <script src="./apps.js" defer></script>
+  </body>
+</html>

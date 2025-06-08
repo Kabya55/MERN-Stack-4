@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@layer components {
+  .bg-img {
+    background-image: url("../img/page-title.jpg");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    background-size: cover;
+  }
+}
