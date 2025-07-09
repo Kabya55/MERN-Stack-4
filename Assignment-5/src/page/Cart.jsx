@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
+import NoItems from "../img/empty-cart.png";
 
 function Cart() {
   const { cart, setCart } = useContext(StoreContext);
@@ -28,11 +29,14 @@ function Cart() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">Shopping Cart</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center">Shopping Cart</h2>
 
       {cart.length === 0 ? (
-        <div className="text-xl text-red-600 font-semibold">
-          No items in the cart.
+        <div>
+          <img src={NoItems} alt="No items in cart" className="mx-auto" />
+          <h1 className="text-2xl lg:text-4xl text-red-600 font-semibold text-center">
+            Your cart is empty!
+          </h1>
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -79,7 +83,7 @@ function Cart() {
                   </div>
                   <button
                     onClick={() => updateQuantity(item.id, -item.quantity)}
-                    className="text-red-600 text-xl underline hover:text-red-800 transition"
+                    className="px-2 py-1  bg-red-600 rounded text-white hover:bg-red-500 transition"
                   >
                     Remove
                   </button>

@@ -9,7 +9,7 @@ export default function ProductItem({ product, onSmash, isInCart }) {
       <div
         onClick={() => navigate(`/product/${product.id}`)}
         key={product.id}
-        className="border border-[#20B2AA] p-4 rounded-lg shadow hover:shadow-lg transition"
+        className="border border-[#20B2AA] p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
       >
         <img
           src={product.image}

@@ -9,15 +9,17 @@ import Footers from "./components/Footer";
 
 function App() {
   return (
-    <div className="px-6">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/product/:id" element={<SingleProduct />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
+    <div className="flex flex-col justify-between min-h-screen">
+      <div className="px-6">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<SingleProduct />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </div>
       {/* <footer className="text-center text-gray-500 text-sm mt-6">
         &copy; {new Date().getFullYear()} Kabya. All rights reserved.
       </footer> */}
