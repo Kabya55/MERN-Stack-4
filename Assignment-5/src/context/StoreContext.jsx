@@ -5,12 +5,9 @@ import { products } from "../data/ProductData";
 export const StoreContext = createContext();
 
 export default function StoreProvider({ children }) {
-
-  
- 
   const [cart, setCart] = useState([]);
-    function handleCartAction(product, isInCart) {
-   
+  const [searchTerm, setSearchTerm] = useState("");
+  function handleCartAction(product, isInCart) {
     if (!isInCart) {
       console.log(product.id);
 
@@ -22,7 +19,16 @@ export default function StoreProvider({ children }) {
   }
 
   return (
-    <StoreContext.Provider value={{ products, cart, setCart,handleCartAction }}>
+    <StoreContext.Provider
+      value={{
+        products,
+        cart,
+        setCart,
+        handleCartAction,
+        searchTerm,
+        setSearchTerm,
+      }}
+    >
       {children}
     </StoreContext.Provider>
   );

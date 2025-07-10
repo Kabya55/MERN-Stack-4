@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 import ProductItem from "../components/ProductItem";
 import { useState, useEffect } from "react";
+import noProductsFound from "../img/product-not-found.png";
 
 function Home() {
   const { products, cart, handleCartAction } = useContext(StoreContext);
@@ -59,7 +60,7 @@ function Home() {
         </div>
       </div>
       <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedProducts &&
+        {sortedProducts && sortedProducts.length > 0 ? (
           sortedProducts.map((product) => {
             const isInCart = cart.some((item) => item.id === product.id);
 
@@ -71,7 +72,16 @@ function Home() {
                 product={product}
               />
             );
-          })}
+          })
+        ) : (
+          <div className="col-span-full flex justify-center items-center">
+            <img
+              src={noProductsFound}
+              alt="No products found"
+              className="mx-auto"
+            />
+          </div>
+        )}
       </div>
     </>
   );

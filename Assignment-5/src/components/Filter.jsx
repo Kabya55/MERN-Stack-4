@@ -1,8 +1,9 @@
 // src/components/ProductFilter.jsx
 
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../data/productsData";
+import { StoreContext } from "../context/StoreContext";
 
 function ProductItem({ product, onSmash, isInCart }) {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ function ProductItem({ product, onSmash, isInCart }) {
 }
 
 export default function ProductFilter() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const { searchTerm, setSearchTerm } = useContext(StoreContext);
   const [sortOrder, setSortOrder] = useState("");
   const [cartItems, setCartItems] = useState([]);
 
@@ -65,11 +66,23 @@ export default function ProductFilter() {
       setCartItems([...cartItems, product]);
     }
   };
-
+  const inputRef = useRef(null);
+  useEffect(() => {
+    function onSmash(e) {
+      if (inputRef.current && !inputRef.current.contains(e.target)) {
+        setSearchTerm("");
+      }
+    }
+    document.addEventListener("click", onSmash);
+    return () => {
+      document.removeEventListener("click", onSmash);
+    };
+  }, [setSearchTerm]);
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
         <input
+          ref={inputRef}
           type="text"
           placeholder="Search products..."
           value={searchTerm}
