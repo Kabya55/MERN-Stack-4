@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 
-function HandleSubmit() {
+function HandleSubmit({ fetchTodos }) {
   const [title, setTitle] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     fetch("http://localhost:3000/posts", {
       method: "POST",
+      body: JSON.stringify({ title, isCommented: false }),
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title, isCommented: false }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("Todo added:", data));
+    }).then(() => {
+      fetchTodos();
+      setTitle("");
+    });
+
+    // .then((response) => response.json())
+    // .then((data) => console.log("Todo added:", data));
   };
 
   return (

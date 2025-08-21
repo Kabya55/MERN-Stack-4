@@ -1,17 +1,17 @@
 import React from "react";
 
-function HandleDelete({ id }) {
+function HandleDelete({ id, fetchTodos }) {
   const handleDelete = () => {
     fetch(`http://localhost:3000/posts/${id}`, {
       method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("Todo deleted:", data));
+    }).then(() => {
+      fetchTodos();
+    });
   };
   return (
-    <div>
+    <>
       <button onClick={handleDelete}>Delete</button>
-    </div>
+    </>
   );
 }
 

@@ -171,6 +171,7 @@ console.log(Boolean(0)); // false
 // ja ja value boolean a covet korla true hoye ta holo truthy value
 console.log(Boolean(1)); // true
 
+// --------------------------------------------------------------
 // Array methods
 // Array holo mutable data structure, ja ekadhik value store korte pare
 // Array er index 0 theke shuru hoye 1,2,3,4,5,6... eirokom sequence a thake
@@ -259,6 +260,11 @@ let anotherArray15 = ["Kabya", "Kishor", "Halder", "Khoken", "Kanti", "Kabita"];
 let anotherArray16 = ["Sikder", "Tandra"];
 let anotherArray17 = anotherArray15.concat(anotherArray16); // anotherArray15.concat(anotherArray16);
 console.log(anotherArray17); // ['Kabya', 'Kishor', 'Halder', 'Khoken', 'Kanti', 'Kabita', 'Sikder', 'Tandra']
+
+// The JavaScript spread operator (...) expands an iterable (like an array) into more elements.
+// This allows us to quickly copy all or parts of an existing array into another array
+let names1 = [...anotherArray15, ...anotherArray16]; // [...anotherArray15, ...anotherArray16];
+console.log(names1); // ['Kabya', 'Kishor', 'Halder', 'Khoken', 'Kanti', 'Kabita', 'Sikder', 'Tandra']
 
 //The copyWithin() method copies array elements to another position in an array:
 //This method overwrites the existing values.
